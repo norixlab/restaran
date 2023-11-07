@@ -57,6 +57,9 @@ button {
 		transform: translate(3px, -2px);
 	}
 }
+.hidden {
+	display: none;
+}
 .title {
 	color: #dcca87;
 	font-family: "Cormorant Upright", serif;
@@ -68,6 +71,7 @@ button {
 .subtitle {
 	position: relative;
 	font-family: "Cormorant Upright", serif;
+	color: #fff;
 	font-size: 23px;
 	font-weight: 700;
 	line-height: 130%;
@@ -275,7 +279,7 @@ button {
 }
 
 .about {
-	background-image: url("../assets/bg-about.jpg");
+	background-image: url("../assets/bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -428,6 +432,182 @@ button {
 	&__img {
 		margin-bottom: 64px;
 		position: relative;
+	}
+}
+//////
+.cheffs {
+	background-image: url("../assets/bg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	&__inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 96px;
+		padding: 150px 0;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 146px;
+			height: 146px;
+			background-image: url("../assets/emblem.svg");
+			right: 0;
+			bottom: -96px;
+		}
+	}
+
+	&__img {
+		position: relative;
+		img {
+			position: relative;
+			z-index: 5;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: 435px;
+			height: 435px;
+			left: -24px;
+			bottom: -19px;
+			background: rgb(220, 202, 135);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 435px;
+			height: 435px;
+			right: -24px;
+			top: -24px;
+			background: rgb(220, 202, 135);
+		}
+	}
+
+	&__title {
+		font-size: 64px;
+		margin-bottom: 76px;
+	}
+
+	&__descr {
+		margin-bottom: 64px;
+		font-style: italic;
+		span {
+			padding-left: 55px;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				height: 40px;
+				width: 47px;
+				background-image: url("../assets/quote.svg");
+				top: -15px;
+				left: 0;
+			}
+		}
+	}
+	&__name {
+		font-size: 32px;
+
+		letter-spacing: 1.28px;
+	}
+	&__category {
+		margin-bottom: 64px;
+	}
+	.signature {
+		width: 235px;
+	}
+}
+////////
+.costomers {
+	&__inner {
+		padding: 152px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__subtitle {
+		&::before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__title {
+		font-size: 64px;
+		margin-bottom: 64px;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 64px 32px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__item-img {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("../assets/quote.svg");
+			width: 47px;
+			height: 40px;
+			bottom: -12px;
+			right: -16px;
+		}
+	}
+
+	&__item-text {
+		display: flex;
+		flex-direction: column;
+	}
+	&__item-quote {
+		font-style: italic;
+		margin-bottom: 16px;
+	}
+
+	&__item-name {
+		font-size: 32px;
+		font-weight: 400;
+		letter-spacing: 1.28px;
+		margin-bottom: 8px;
+	}
+}
+
+.video {
+	position: relative;
+	// height: 763px;
+
+	video {
+		height: 763px;
+		width: 100%;
+	}
+
+	&__poster {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0.3s ease;
+		object-fit: cover;
+	}
+
+	&__play-btn {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
 	}
 }
 
