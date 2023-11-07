@@ -19,6 +19,7 @@ body {
   background: #0c0b08;
   line-height: 175%;
   letter-spacing: 0.64px;
+  outline: #f5efdb;
 }
 
 a {
@@ -48,15 +49,44 @@ button {
   font-family: "Cormorant Upright", serif;
   font-size: 16px;
   font-weight: 700;
-  line-height: 175%; /* 28px */
+  line-height: 175%;
   letter-spacing: 0.64px;
-  padding: 4px 32px;
+  padding: 8px 32px;
   background: #dcca87;
   transition: all 0.3s;
 }
 .btn:hover {
   background: #fcd753;
   transform: translate(3px, -2px);
+}
+
+.title {
+  color: #dcca87;
+  font-family: "Cormorant Upright", serif;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 1.92px;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  position: relative;
+  font-family: "Cormorant Upright", serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.92px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+.subtitle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/decor.svg");
+  width: 40px;
+  height: 10px;
+  left: 0;
+  bottom: -15px;
 }
 
 .big-container {
@@ -156,7 +186,7 @@ button {
   font-family: "Cormorant Upright", serif;
   font-size: 20px;
   font-weight: 400;
-  line-height: 175%; /* 28px */
+  line-height: 175%;
   letter-spacing: 0.64px;
 }
 .hero__numbers span {
@@ -196,40 +226,17 @@ button {
   align-items: center;
   gap: 180px;
 }
-.hero-box__subtitle {
-  position: relative;
-  font-family: "Cormorant Upright", serif;
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 130%; /* 29.9px */
-  letter-spacing: 0.92px;
-  text-transform: capitalize;
-  margin-bottom: 25px;
-}
-.hero-box__subtitle::before {
-  content: "";
-  position: absolute;
-  background-image: url("../assets/decor.svg");
-  width: 40px;
-  height: 10px;
-  left: 0;
-  bottom: -15px;
-}
 .hero-box__title {
-  font-family: "Cormorant Upright", serif;
   font-size: 90px;
   font-weight: 600;
-  color: #dcca87;
-  line-height: 130%; /* 117px */
   letter-spacing: 3.6px;
-  text-transform: capitalize;
   margin-bottom: 32px;
 }
 .hero-box__descr {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 175%; /* 28px */
+  line-height: 175%;
   letter-spacing: 0.64px;
   margin-bottom: 32px;
 }
@@ -266,9 +273,6 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .about__inner {
   display: flex;
@@ -285,14 +289,7 @@ button {
 }
 .about__title {
   position: relative;
-  color: #dcca87;
-  font-variant-numeric: lining-nums tabular-nums;
-  font-family: "Cormorant Upright", serif;
   font-size: 64px;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 1.92px;
-  text-transform: capitalize;
   margin-bottom: 50px;
 }
 .about__title--right::before {
@@ -336,4 +333,75 @@ button {
   height: 415px;
   top: 150px;
   left: -150px;
+}
+
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 127px 0;
+}
+.menu__subtitle {
+  color: #fff;
+}
+.menu__subtitle::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu__title {
+  font-size: 64px;
+  letter-spacing: 2.56px;
+  margin-bottom: 64px;
+}
+
+.menu-content {
+  display: flex;
+  gap: 32px;
+}
+.menu-content__title {
+  text-align: center;
+  color: #fff;
+  font-size: 45px;
+  letter-spacing: 1.8px;
+  padding-top: 32px;
+  margin-bottom: 48px;
+}
+.menu-content__item {
+  margin-bottom: 40px;
+}
+.menu-content__item-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-content__item-title {
+  text-align: left;
+  margin-right: 30px;
+  margin-bottom: 8px;
+  max-width: 200px;
+  font-family: "Cormorant Upright", serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+.menu-content__item-price {
+  font-family: "Cormorant Upright", serif;
+  font-size: 23px;
+  font-weight: 700;
+  position: relative;
+  padding-left: 120px;
+  margin-left: 30px;
+}
+.menu-content__item-price::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  left: -30px;
+  top: 16px;
+  background: #fff;
+}
+.menu-content__img {
+  margin-bottom: 64px;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
