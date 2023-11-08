@@ -383,6 +383,7 @@ button {
   line-height: 130%;
   letter-spacing: 1.92px;
   text-transform: capitalize;
+  margin-bottom: 64px;
 }
 
 .subtitle {
@@ -878,4 +879,54 @@ button {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.awards {
+  background-image: url("../assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.awards__inner {
+  padding: 128px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 183px;
+}
+.awards__title {
+  font-size: 64px;
+}
+.awards__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px 32px;
+}
+.awards__content-item {
+  display: flex;
+  align-items: center;
+  gap: 0 32px;
+}
+.awards__content-icon {
+  width: 79px;
+  height: 79px;
+}
+.awards__content-title {
+  font-weight: 700;
+  font-size: 23px;
+  margin-bottom: 8px;
+  text-wrap: nowrap;
+}
+.awards__img {
+  position: relative;
+}
+.awards__img::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 380px;
+  background-image: url("../assets/g-white.svg");
+  background-repeat: no-repeat;
+  left: -72px;
+  bottom: 6px;
 }/*# sourceMappingURL=style.css.map */
